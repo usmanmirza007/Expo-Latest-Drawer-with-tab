@@ -48,3 +48,18 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+Drawer and bottom tab must be add index file and auth folder not add index because do not auto render auth screen.
+
+
+Expo Router Example
+If you want Profile Detail as a dynamic route (e.g. /profile/123)
+
+app/
+└── (drawer)/
+    └── (tab)/
+        └── profile/
+            ├── index.tsx          # Overview
+            ├── [userId].tsx       # Dynamic detail
+            ├── edit.tsx           # Edit profile
+

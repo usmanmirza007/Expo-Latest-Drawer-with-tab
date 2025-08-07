@@ -1,5 +1,5 @@
 import Button from "@/components/Button";
-import { useNavigation } from "expo-router";
+import { router, useNavigation } from "expo-router";
 import React, { useLayoutEffect } from "react";
 import { View } from "react-native";
 const Index = () => {
@@ -11,7 +11,7 @@ const Index = () => {
   return (
     <View>
       <Button onPress={() => {
-        // router.push('/(auth)/login');
+        router.push('/(auth)/login');
       }}>Login</Button>
 
     </View>
