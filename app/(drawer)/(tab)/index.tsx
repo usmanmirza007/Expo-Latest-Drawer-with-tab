@@ -1,15 +1,13 @@
 import Button from "@/components/Button";
-import { router, useNavigation } from "expo-router";
-import React, { useLayoutEffect } from "react";
+import Header from "@/components/Header";
+import { router } from "expo-router";
+import React from "react";
 import { View } from "react-native";
 const Index = () => {
-  const navigation = useNavigation();
 
-  useLayoutEffect(() => {
-    navigation.getParent()?.setOptions({ headerTitle: "Index" });
-  }, [navigation]);
   return (
     <View>
+      <Header title="Home" isDrawer={true}/>
       <Button onPress={() => {
         router.push('/(auth)/login');
       }}>Login</Button>

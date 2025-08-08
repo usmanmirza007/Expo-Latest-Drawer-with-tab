@@ -10,7 +10,7 @@ export default function RootLayout() {
   return (
       <Stack initialRouteName='profile' screenOptions={{}}>
         <Stack.Screen name="profile" options={{ headerShown: false }} />
-        <Stack.Screen name="[userId]" options={{ headerShown: false }} />
+        <Stack.Screen name="[userId]" options={{ headerShown: true }} />
       </Stack>
   );
 }

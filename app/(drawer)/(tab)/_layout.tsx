@@ -1,28 +1,8 @@
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
-import { useNavigationState } from "@react-navigation/native";
-import { Tabs, useNavigation } from "expo-router";
-import React, { useEffect } from "react";
+import { Tabs } from "expo-router";
+import React from "react";
 
 const Tabroot = () => {
-  const navigation = useNavigation();
-
-  const tabIndex = useNavigationState(state => {
-    const tabRoute = state.routes.find(r => r.name === '(tab)');
-    return tabRoute?.state?.index ?? 0;
-  });
-
-  const currentTab = useNavigationState(state => {
-    const tabRoute = state.routes.find(r => r.name === '(tab)');
-    return tabRoute?.state?.routes?.[tabIndex]?.name ?? 'index';
-  });
-
-  useEffect(() => {
-    let title = 'Home';
-    if (currentTab === 'settings') title = 'Settings';
-    else if (currentTab === 'profile') title = 'Profile';
-
-    navigation.getParent()?.setOptions({ headerTitle: title });
-  }, [currentTab, navigation]);
 
   return (
     <Tabs initialRouteName="index" screenOptions={{ headerShown: false }} >

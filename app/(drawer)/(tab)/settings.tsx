@@ -1,20 +1,19 @@
+import Header from '@/components/Header';
 import { Entypo, FontAwesome6, Ionicons, MaterialIcons } from '@expo/vector-icons';
-import { useNavigation } from 'expo-router';
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Switch, Text, View } from 'react-native';
 
 const Settings = () => {
-    const navigation = useNavigation();
-  
+
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
-useLayoutEffect(() => {
-    navigation.getParent()?.setOptions({ headerTitle: "Settings" });
-  }, [navigation]);
+
   return (
     <View style={{
-      marginHorizontal: "2%"
+
     }}>
+      <Header title="Settings" isDrawer={true}/>
+
       {/* <View style={{
         alignItems: "center",
 

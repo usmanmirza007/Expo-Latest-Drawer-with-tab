@@ -10,6 +10,7 @@ const ProfileDetail = () => {
   }, [navigation]);
   return (
     <View>
+      {/* <Header title="ProfileDetail" /> */}
       <Text>ProfileDetail</Text>
       
     </View>

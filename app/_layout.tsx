@@ -21,6 +21,7 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack initialRouteName='(drawer)'>
         <Stack.Screen name="(drawer)" options={{ headerShown: false }} />
+        <Stack.Screen name="(auth)/login" options={{ headerShown: true }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
