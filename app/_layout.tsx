@@ -5,6 +5,7 @@ import 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { StatusBar } from 'expo-status-bar';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
@@ -18,6 +19,7 @@ export default function RootLayout() {
   }
   
   return (
+    <SafeAreaView style={{ flex: 1 }} >
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack initialRouteName='(drawer)'>
         <Stack.Screen name="(drawer)" options={{ headerShown: false }} />
@@ -26,6 +28,7 @@ export default function RootLayout() {
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
+    </SafeAreaView>
   );
 }
 

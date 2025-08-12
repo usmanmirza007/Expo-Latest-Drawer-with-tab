@@ -1,4 +1,5 @@
-import { useNavigation } from "expo-router";
+import { Button } from "@react-navigation/elements";
+import { router, useNavigation } from "expo-router";
 import React, { useLayoutEffect } from "react";
 import { Text, View } from "react-native";
 
@@ -12,7 +13,9 @@ const ProfileDetail = () => {
     <View>
       {/* <Header title="ProfileDetail" /> */}
       <Text>ProfileDetail</Text>
-      
+       <Button onPress={() => {
+        router.push('/(auth)/login');
+      }}>login</Button>
     </View>
   )
 }
