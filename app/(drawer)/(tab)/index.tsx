@@ -11,9 +11,127 @@ const Index = () => {
 
   const input = [1, 2, 3, 1, 4, 2, 3,]
   const flatArray = [1, 2, 3, [3, 4, 2, [3]], 4, [[4, 5], 2, 4], [2]]
+  const array = [1, 2, null, 4, false, 0, "", null, undefined, 2, NaN]
   const uniqueValues: any[] = [];
 
+  const reversed = 'hello'
+  const palindrome = 'madam'
+  const vowels = 'Hello World"'
+  const nonRepeating = 'swiss'
+  const occurrence = 'banana'
+  const large = 'I love JavaScript a lot'
+  const capitalWord = 'hello world from js'
+  const duplicate = 'mississippi'
   const javascriptPractices = () => {
+
+    // let text = ''
+    // for (let index = 0; index < duplicate.length; index++) {
+    //   const element = duplicate[index];
+    //   if (!text.includes(element)) {
+    //     text += element;
+    //   }
+    // }
+    // console.log('text', text);
+    
+
+    // let text = ''
+    // for (let index = 0; index < capitalWord.length; index++) {
+    //   const element = capitalWord[index];
+
+    //   if (text.length == 0) {
+    //     text = element.toUpperCase();
+    //   } else {
+    //     if (element == ' ') {
+    //       text += ' '
+    //       text = text + capitalWord[index + 1].toUpperCase()
+    //       index++
+    //     } else {
+    //       text = text + element;
+    //     }
+    //   }
+    // }
+    // console.log('text', text);
+
+    // let count = ''
+    // // Find the largest word in the string 'large'
+    // const words = [];
+    // let word = '';
+    // for (let i = 0; i < large.length; i++) {
+    //   const char = large[i];
+    //   if (char === ' ') {
+    //     if (word.length > 0) {
+    //       words.push(word);
+    //       word = '';
+    //     }
+    //   } else {
+    //     word += char;
+    //   }
+    // }
+    // if (word.length > 0) {
+    //   words.push(word);
+    // }
+    // let largestWord = '';
+    // for (let i = 0; i < words.length; i++) {
+    //   if (words[i].length > largestWord.length) {
+    //     largestWord = words[i];
+    //   }
+    // }
+    // count = largestWord;
+    // console.log('count', count);
+
+
+    // let reversed = '';
+    // for (let index = 0; index < text.length; index++) {
+    //   const element = text[index];
+    //   console.log('fofof', element);
+    //   reversed = element + reversed;
+    // }
+    // console.log('reversed', reversed);
+
+    // const isPalindrome = true;
+    // let text: string = '';
+    // for (let index = 0; index < palindrome.length; index++) {
+    //   const element = palindrome[index];
+    //   text = element + text;
+    // }
+    // if (text === palindrome) {
+    //   console.log('isPalindrome', isPalindrome);
+    // } else {
+    //   console.log('isPalindrome', !isPalindrome);
+    // }
+
+    // let count = 0;
+    // for (let index = 0; index < vowels.length; index++) {
+    //   const element = vowels[index];
+    //   if (element == 'a' || element == 'e' || element == 'i' || element == 'o' || element == 'u') {
+    //     console.log('Vowel found:', element);
+    //     count++;
+    //   }
+    // }
+    // console.log('Total vowels found:', count);
+
+    // let seen: any= {};
+    // for (let index = 0; index < nonRepeating.length; index++) {
+    //   const element = nonRepeating[index];
+    //   seen[element] = (seen[element] || 0) + 1
+    // }
+    // // Find the first non-repeating character
+    // for (let index = 0; index < nonRepeating.length; index++) {
+    //   const element = nonRepeating[index];
+    //   if (seen[element] === 1) {
+    //   console.log('First non-repeating letter:', element);
+    //   break;
+    //   }
+    // }
+    // console.log('seen', seen);
+
+    // let obj: any = {}
+    // for (let index = 0; index < occurrence.length; index++) {
+    //   const element = occurrence[index];
+    //   obj[element] = (obj[element] || 0) + 1
+    // }
+    // console.log('repeat chart', obj.a);
+
     // for (let index = 0; index < input.length; index++) {
     //   const element = input[index];
     //   if (!uniqueValues.includes(element)) {
@@ -127,7 +245,16 @@ const Index = () => {
     // }
     // console.log('arr', arr);
 
-    
+    // const filteredArray = [];
+    // for (let index = 0; index < array.length; index++) {
+    //   const element = array[index];
+    //   if (element != null && element !== false && element !== 0 && element !== "" && element !== undefined && !Number.isNaN(element)) {
+    //     filteredArray.push(element);
+    //   }
+    // }
+    // console.log('filteredArray', filteredArray);
+
+
 
 
   }
