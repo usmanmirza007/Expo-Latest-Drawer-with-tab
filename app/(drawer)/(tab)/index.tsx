@@ -22,7 +22,41 @@ const Index = () => {
   const large = 'I love JavaScript a lot'
   const capitalWord = 'hello world from js'
   const duplicate = 'mississippi'
+  const requent = 'abbcccdddde'
+  const compression = 'aaabbc'
   const javascriptPractices = () => {
+
+    // let text = ''
+    // // String compression: Replace sequences of the same character with character + count
+    // let count = 1;
+    // for (let i = 0; i < compression.length; i++) {
+    //   if (compression[i] === compression[i + 1]) {
+    //     count++;
+    //   } else {
+    //   text += compression[i] + (count ? count : '');
+    //   count = 1;
+    //   }
+    // }
+
+    // console.log('compressed', text);
+
+
+    // let obj: any = {}
+    // for (let i = 0; i < requent.length; i++) {
+    //   const char = requent[i];
+    //   if (char === ' ') continue;
+    //   obj[char] = (obj[char] || 0) + 1;
+    // }
+    // let maxChar = '';
+    // let maxCount = 0;
+    // for (const key in obj) {      
+    //   if (obj[key] > maxCount) {
+    //     maxCount = obj[key];
+    //     maxChar = key;
+    //   }
+    // }
+    // console.log('Most frequent letter:', maxChar, 'appears', maxCount, 'times');
+    // console.log('obj', obj, Object.keys(obj)[3]);
 
     // let text = ''
     // for (let index = 0; index < duplicate.length; index++) {
