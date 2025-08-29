@@ -10,6 +10,7 @@ const Index = () => {
   }, [])
 
   const input = [1, 2, 3, 1, 4, 2, 3,]
+  const flatArray = [1, 2, 3, [3, 4, 2, [3]], 4, [[4, 5], 2, 4], [2]]
   const uniqueValues: any[] = [];
 
   const javascriptPractices = () => {
@@ -62,13 +63,72 @@ const Index = () => {
     //   }
     // }
     // console.log('missingElements', missingElements);
-    let Occurrences: { [key: number]: number } = {};
-    for (let index = 0; index < input.length; index++) {
-      const element = input[index];
-      Occurrences[element] = (Occurrences[element] || 0) + 1;
-    }
-    console.log('Occurrences', Occurrences);
+
+    // let Occurrences: { [key: number]: number } = {};
+    // for (let index = 0; index < input.length; index++) {
+    //   const element = input[index];
+    //   Occurrences[element] = (Occurrences[element] || 0) + 1;
+    // }
+    // // console.log('Occurrences', Occurrences);
+
+    // // Find the first non-repeating element
+    // for (let index = 0; index < input.length; index++) {
+    //   const element = input[index];
+
+    //   if (Occurrences[element] === 1) {
+    //     console.log('First non-repeating element', element);
+    //     break;
+    //   }
+    // }
+
+    // Return all indices of a target number in an array
+    // const target = 2;
+    // const targetIndex = [];
+    // for (let index = 0; index < input.length; index++) {
+    //   const element = input[index];
+    //   if (element === target) {
+    //     targetIndex.push(index);
+    //   }
+    // }
+    // console.log('targetIndex', targetIndex);
+
+    // const flat: any = [];
+    // const flattenArray = (arr: any[]) => {
+    //   for (let i = 0; i < arr.length; i++) {
+    //     const element = arr[i];
+    //     if (Array.isArray(element)) {
+    //       flattenArray(element);
+    //     } else {
+    //       flat.push(element);
+    //     }
+    //   }
+    // };
+    // flattenArray(flatArray);
+    // console.log('flat', flat);
+
+    // const chunk = 2;
+    // const chunkedArray = [];
+    // for (let index = 0; index < input.length; index++) {
+    //   const element = input[index];
+    //   if (index % chunk === 0) {
+    //     chunkedArray.push(input.slice(index, index + chunk));
+    //   }
+    // }
+    // console.log('chunkedArray', chunkedArray);
+    // const arr = []
+    // for (let index = 0; index < input.length; index++) {
+    //   const element = input[index];
+    //   if (input.length - 1 == index) {
+    //     arr.unshift(element)
+    //   } else {
+    //     arr.push(element);
+    //   }
+
+    // }
+    // console.log('arr', arr);
+
     
+
 
   }
 
