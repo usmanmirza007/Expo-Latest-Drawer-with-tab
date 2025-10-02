@@ -1,8 +1,10 @@
 import Button from "@/components/Button";
 import Header from "@/components/Header";
 import { router } from "expo-router";
+import LottieView from "lottie-react-native";
 import React, { useEffect } from "react";
-import { Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
+
 const Index = () => {
 
   useEffect(() => {
@@ -24,7 +26,46 @@ const Index = () => {
   const duplicate = 'mississippi'
   const requent = 'abbcccdddde'
   const compression = 'aaabbc'
+  const unique = 'abcdefa'
+  const firstLetter = 'hello'
   const javascriptPractices = () => {
+
+    // // First letter move to end
+    // let text = ''
+    // for (let index = 0; index < firstLetter.length; index++) {
+    //   const element = firstLetter[index];
+    //   if (firstLetter.length - 1 == index) {
+    //     text = element + text;
+    //   } else {
+    //     text += element
+    //   }
+    // }
+    // console.log('text', text);
+    
+
+    // // Febnoic serivce
+    // const seriesArray = [0, 1];
+    // const ten = 10;
+    // for (let index = 1; index < ten; index++) {
+    //   const previous = seriesArray[index - 1];
+    //   const current = seriesArray[index];
+    //   const series = current + previous;
+    //   seriesArray.push(series);
+    // }
+    // console.log('seriesArray', seriesArray);
+
+    // // Duplicate Remove
+    // for (let index = 0; index < unique.length; index++) {
+    //   const element = unique[index];
+    //   if (!uniqueValues.includes(element)) {
+    //     uniqueValues.push(element);
+    //   } else {
+    //     console.log('Duplicate value found:', element);
+    //   }
+    // }
+    // if (uniqueValues.length) {
+    //   console.log('Unique values:', uniqueValues);
+    // }
 
     // let text = ''
     // // String compression: Replace sequences of the same character with character + count
@@ -66,7 +107,7 @@ const Index = () => {
     //   }
     // }
     // console.log('text', text);
-    
+
 
     // let text = ''
     // for (let index = 0; index < capitalWord.length; index++) {
@@ -305,6 +346,16 @@ const Index = () => {
       <Text className="text-xl font-bold text-red-700">
         🚀 NativeWind working
       </Text>
+      <LottieView
+        source={require("../../../assets/animations/gym.json")}
+        autoPlay
+        loop={true} // play only once
+        style={{ width: 200, height: 200 }}
+      />
+       <Image
+        source={require("../../../assets/animations/gym.gif")}
+        style={{ width: 200, height: 200 }}
+      />
       {/* </View> */}
     </View>
   )
