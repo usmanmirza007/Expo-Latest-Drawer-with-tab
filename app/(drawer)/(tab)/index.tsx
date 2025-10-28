@@ -346,8 +346,9 @@ const Index = () => {
       <Text className="text-xl font-bold text-red-700">
         🚀 NativeWind working
       </Text>
+
       <LottieView
-        source={require("../../../assets/animations/data.json")}
+        source={require("../../../assets/animations/exe3.json")}
         autoPlay
         loop={true} // play only once
         style={{ width: 200, height: 200 }}
