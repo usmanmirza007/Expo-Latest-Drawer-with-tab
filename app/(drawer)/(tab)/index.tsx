@@ -348,7 +348,7 @@ const Index = () => {
       </Text>
 
       <LottieView
-        source={require("../../../assets/animations/exe3.json")}
+        source={require("../../../assets/animations/PushUps.json")}
         autoPlay
         loop={true} // play only once
         style={{ width: 200, height: 200 }}
