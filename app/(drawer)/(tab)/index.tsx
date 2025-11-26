@@ -21,10 +21,10 @@ const Index = () => {
   const vowels = 'Hello World"'
   const nonRepeating = 'swiss'
   const occurrence = 'banana'
-  const large = 'I love JavaScript a lot'
+  const largeWord = 'I love JavaScript a lot'
   const capitalWord = 'hello world from js'
   const duplicate = 'mississippi'
-  const requent = 'abbcccdddde'
+  const frequency = 'abbcccdddde'
   const compression = 'aaabbc'
   const unique = 'abcdefa'
   const firstLetter = 'hello'
@@ -41,7 +41,32 @@ const Index = () => {
     //   }
     // }
     // console.log('text', text);
-    
+
+    // // Anagram Check - Check if two strings are anagrams of each other    
+    // function areAnagrams(s1, s2) {
+    //   // Step 1: Length check
+    //   if (s1.length !== s2.length) return false;
+
+    //   const count = {};
+
+    //   // Step 2: Count characters in s1
+    //   for (const char of s1) {
+    //     count[char] = (count[char] || 0) + 1;
+    //   }
+
+    //   // Step 3: Decrement for s2
+    //   for (const char of s2) {
+    //     if (!count[char]) return false;
+    //     count[char]--;
+    //     if (count[char] === 0) delete count[char];
+    //   }
+
+    //   return Object.keys(count).length === 0;
+    // }
+
+    // // Test
+    // console.log(areAnagrams("listen", "silent")); // true
+    // console.log(areAnagrams("hello", "bello"));   // false
 
     // // Febnoic serivce
     // const seriesArray = [0, 1];
@@ -83,8 +108,8 @@ const Index = () => {
 
 
     // let obj: any = {}
-    // for (let i = 0; i < requent.length; i++) {
-    //   const char = requent[i];
+    // for (let i = 0; i < frequency.length; i++) {
+    //   const char = frequency[i];
     //   if (char === ' ') continue;
     //   obj[char] = (obj[char] || 0) + 1;
     // }
@@ -96,7 +121,7 @@ const Index = () => {
     //     maxChar = key;
     //   }
     // }
-    // console.log('Most frequent letter:', maxChar, 'appears', maxCount, 'times');
+    // console.log('Most frequency letter:', maxChar, 'appears', maxCount, 'times');
     // console.log('obj', obj, Object.keys(obj)[3]);
 
     // let text = ''
@@ -131,8 +156,8 @@ const Index = () => {
     // // Find the largest word in the string 'large'
     // const words = [];
     // let word = '';
-    // for (let i = 0; i < large.length; i++) {
-    //   const char = large[i];
+    // for (let i = 0; i < largeWord.length; i++) {
+    //   const char = largeWord[i];
     //   if (char === ' ') {
     //     if (word.length > 0) {
     //       words.push(word);
@@ -298,6 +323,8 @@ const Index = () => {
     // };
     // flattenArray(flatArray);
     // console.log('flat', flat);
+    // // Time Complexity: O(n²)
+    // // Space Complexity: O(n) (ignoring output array)
 
     // const chunk = 2;
     // const chunkedArray = [];
@@ -319,6 +346,8 @@ const Index = () => {
 
     // }
     // console.log('arr', arr);
+    // // Time Complexity: O(n²)
+    // // Space Complexity: O(n) (ignoring output array)
 
     // const filteredArray = [];
     // for (let index = 0; index < array.length; index++) {
@@ -328,9 +357,147 @@ const Index = () => {
     //   }
     // }
     // console.log('filteredArray', filteredArray);
+    // // Time Complexity: O(n)
+    // // Space Complexity: O(n) (ignoring output array)
+
+    // // Find all pairs whose sum equals a target
+    // function findPairs(arr: number[], target: number) {
+    //   const result = [];
+    //   for (let i = 0; i < arr.length; i++) {
+    //     for (let j = i + 1; j < arr.length; j++) {
+    //       if (arr[i] + arr[j] === target) {
+    //         result.push([arr[i], arr[j]]);
+    //       }
+    //     }
+    //   }
+    //   return result;
+    // }
+
+    // console.log(findPairs([2, 4, 3, 5, 7], 7)); // [ [2,5], [4,3] ]
+    // // Time Complexity: O(n²)
+    // // Space Complexity: O(1) (ignoring output array)
+
+    // // Find the second largest number
+    // function secondLargest(arr) {
+    //   if (arr.length < 2) return null; // Not enough elements
+
+    //   let first = -Infinity;
+    //   let second = -Infinity;
+
+    //   for (let num of arr) {
+    //     if (num > first) {
+    //       second = first;
+    //       first = num;
+    //     } else if (num > second && num < first) {
+    //       second = num;
+    //     }
+    //   }
+
+    //   return second === -Infinity ? null : second;
+    // }
+
+    // // Examples
+    // console.log(secondLargest([5, 1, 8, 3, 8])); // 5
+    // console.log(secondLargest([10, 10, 10]));   // null
+    // console.log(secondLargest([1]));            // null
+    // // Time Complexity: O(n log n)
+    // // Space Complexity: O(n) (ignoring output array)
+
+    // // Majority Element: Find the element that appears more than n/2 times
+    // function majorityElement(nums) {
+    //   let candidate = null;
+    //   let count = 0;
+
+    //   for (const num of nums) {
+    //     if (count === 0) {
+    //       candidate = num;
+    //     }
+    //     count += (num === candidate) ? 1 : -1;
+    //   }
+
+    //   return candidate;
+    // }
+
+    // // Test
+    // const nums = [3, 3, 4, 2, 3, 3, 3];
+    // console.log(majorityElement(nums)); // Output: 3
 
 
 
+    // ############################## number problems ##############################
+
+    // // Prime Number Check
+    // function isPrime(n) {
+    //   if (n <= 1) return false;
+    //   if (n <= 3) return true;
+    //   if (n % 2 === 0 || n % 3 === 0) return false;
+
+    //   // Check divisors from 5 to sqrt(n)
+    //   for (let i = 5; i * i <= n; i += 6) {
+    //     if (n % i === 0 || n % (i + 2) === 0) {
+    //       return false;
+    //     }
+    //   }
+
+    //   return true;
+    // }
+
+    // // Test cases
+    // console.log(isPrime(97));  // true
+    // console.log(isPrime(1));   // false
+    // console.log(isPrime(4));   // false
+    // console.log(isPrime(13));  // true
+    // console.log(isPrime(100)); // false
+
+    // // Nth Prime Number
+    // function nthPrime(n) {
+    //   if (n === 1) return 2;
+
+    //   const primes = [2];
+    //   let num = 3; // start checking from 3
+
+    //   while (primes.length < n) {
+    //     let isPrime = true;
+
+    //     // Check if num is divisible by any previous prime
+    //     for (const p of primes) {
+    //       if (p * p > num) break; // optimization: only check up to sqrt(num)
+    //       if (num % p === 0) {
+    //         isPrime = false;
+    //         break;
+    //       }
+    //     }
+
+    //     if (isPrime) {
+    //       primes.push(num);
+    //     }
+    //     num += 2; // skip even numbers
+    //   }
+
+    //   return primes[primes.length - 1];
+    // }
+
+    // // Test
+    // console.log(nthPrime(6));  // Output: 13
+    // console.log(nthPrime(1));  // 2
+    // console.log(nthPrime(5));  // 11
+
+    // // Factorial Calculation
+    // function factorial(n) {
+    //   if (n < 0) return undefined; // factorial not defined for negative
+    //   if (n === 0 || n === 1) return 1;
+
+    //   let result = 1;
+    //   for (let i = 2; i <= n; i++) {
+    //     result *= i;
+    //   }
+    //   return result;
+    // }
+
+    // // Test
+    // console.log(factorial(5));  // 120
+    // console.log(factorial(0));  // 1
+    // console.log(factorial(6));  // 720
 
   }
 
@@ -353,7 +520,7 @@ const Index = () => {
         loop={true} // play only once
         style={{ width: 200, height: 200 }}
       />
-       <Image
+      <Image
         source={require("../../../assets/animations/gym.gif")}
         style={{ width: 200, height: 200 }}
       />
