@@ -1,9 +1,8 @@
 import Button from "@/components/Button";
 import Header from "@/components/Header";
 import { router } from "expo-router";
-import LottieView from "lottie-react-native";
 import React, { useEffect } from "react";
-import { Image, Text, View } from "react-native";
+import { Text, View } from "react-native";
 
 const Index = () => {
 
@@ -514,16 +513,6 @@ const Index = () => {
         🚀 NativeWind working
       </Text>
 
-      <LottieView
-        source={require("../../../assets/animations/PushUps.json")}
-        autoPlay
-        loop={true} // play only once
-        style={{ width: 200, height: 200 }}
-      />
-      <Image
-        source={require("../../../assets/animations/gym.gif")}
-        style={{ width: 200, height: 200 }}
-      />
       {/* </View> */}
     </View>
   )
